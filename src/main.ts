@@ -17,7 +17,7 @@ const allScientistsSub: Subscription = scientists$.subscribe((data) => {
 // adds the subscription to the list of subscriptions
 subscriptions.push(allScientistsSub);
 
-// We can resuse an observable by piping them into others
+// We can reuse an observable by piping them into others
 // Create an Observable that only contains Nobel Laureates
 const nobelLaureates$ = scientists$.pipe(
   map((awardedScientists) => awardedScientists.filter((scientist) => scientist.wasNobelLaureate))
